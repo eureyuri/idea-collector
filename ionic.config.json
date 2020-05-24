@@ -1,0 +1,7 @@
+{
+  "name": "ideacollector",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
