@@ -4,13 +4,15 @@ import {
 } from '@ionic/react';
 import SmallHeader from "../../components/Header/SmallHeader";
 import LargeHeader from "../../components/Header/LargerHeader";
+import LinkList from "../../components/Link/LinkList";
 
-const News = () => {
+const News = (props) => {
   return (
     <IonPage>
       <SmallHeader title="News"/>
       <IonContent fullscreen>
         <LargeHeader title="News"/>
+        <LinkList location={props.location} />
       </IonContent>
     </IonPage>
   );
