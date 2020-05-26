@@ -19,6 +19,7 @@ import Trending from './pages/Tabs/Trending';
 import EditProfile from './pages/Auth/EditProfile';
 import Signup from './pages/Auth/Signup';
 import Login from './pages/Auth/Login';
+import Link from './pages/Link';
 import Forgot from './pages/Auth/Forgot';
 import userAuth from "./hooks/useAuth";
 import UserContext from "./contexts/UserContext";
@@ -65,6 +66,7 @@ const App = () => {
                 <Route path="/register" component={Signup} />
                 <Route path="/login" component={Login} />
                 <Route path="/forgot" component={Forgot} />
+                <Route path="/link/:linkId" component={Link} />
                 <Route component={() => <Redirect to="/news" />} />
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
