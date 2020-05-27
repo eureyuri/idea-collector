@@ -13,12 +13,12 @@ export default function validateEditProfile(values) {
 
   if (!values.currentPassword) {
     errors.currentPassword = "Current password is required";
-  } else if (values.currentPassword.length < 6) {
-    errors.currentPassword = "Current password must be at least 6 characters";
+  } else if (values.currentPassword.length < 5) {
+    errors.currentPassword = "Current password must be at least 5 characters";
   }
 
-  if (values.newPassword.length < 6) {
-    errors.newPassword = "New password must be at least 6 characters";
+  if (values.newPassword.length < 5) {
+    errors.newPassword = "New password must be at least 5 characters";
   }
 
   return errors;

@@ -16,7 +16,6 @@ import {
   timeOutline,
   chatbubbleEllipsesOutline,
 } from "ionicons/icons";
-import { getHostName } from "../../helpers/domain";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
 const LinkItem = ({ link, index, showCount, url, browser }) => {
@@ -34,29 +33,8 @@ const LinkItem = ({ link, index, showCount, url, browser }) => {
               {showCount && index}
             </IonBadge>
             <IonLabel>
-              <p
-                style={{
-                  alignItems: "center",
-                  fontSize: "0.8rem",
-                  fontWeight: "normal",
-                }}
-              >
-                <IonIcon
-                  icon={linkOutline}
-                  style={{
-                    verticalAlign: "middle",
-                  }}
-                />{" "}
-                <IonText
-                  style={{
-                    verticalAlign: "middle",
-                  }}
-                >
-                  {getHostName(link.url)}
-                </IonText>
-              </p>
 
-              <div className="ion-padding-vertical ion-text-wrap">
+              <div className="ion-padding-bottom ion-text-wrap">
                 <strong style={{ fontSize: "1rem" }}>{link.description}</strong>
               </div>
 

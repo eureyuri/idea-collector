@@ -8,6 +8,7 @@ import {
   IonRow,
   IonCol,
   IonButton,
+  IonTextarea
 } from "@ionic/react";
 import SmallHeader from "../../components/Header/SmallHeader";
 import LargeHeader from "../../components/Header/LargerHeader";
@@ -56,25 +57,18 @@ const Submit = (props) => {
       <IonContent fullscreen>
         <LargeHeader title="Submit" />
         <IonItem lines="full">
+          <IonRow>&nbsp;</IonRow>
           <IonLabel position="floating">Description</IonLabel>
-          <IonInput
+          <IonTextarea
             name="description"
             value={values.description}
             type="text"
             onIonChange={handleChange}
             required
-          ></IonInput>
+          ></IonTextarea>
         </IonItem>
-        <IonItem lines="full">
-          <IonLabel position="floating">URL</IonLabel>
-          <IonInput
-            name="url"
-            value={values.url}
-            type="url"
-            onIonChange={handleChange}
-            required
-          ></IonInput>
-        </IonItem>
+        <IonRow>&nbsp;</IonRow>
+        <IonRow>&nbsp;</IonRow>
         <IonRow>
           <IonCol>
             <IonButton

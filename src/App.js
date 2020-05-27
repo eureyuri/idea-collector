@@ -54,10 +54,10 @@ const App = () => {
           <IonRouterOutlet>
             <Route
               path="/"
-              render={() => <Redirect to="/news" />}
+              render={() => <Redirect to="/new" />}
               exact={true}
               />
-                <Route path="/news" component={News} />
+                <Route path="/new" component={News} />
                 <Route path="/trending" component={Trending} />
                 <Route path="/submit" component={Submit} />
                 <Route path="/search" component={Search} />
@@ -67,12 +67,12 @@ const App = () => {
                 <Route path="/login" component={Login} />
                 <Route path="/forgot" component={Forgot} />
                 <Route path="/link/:linkId" component={Link} />
-                <Route component={() => <Redirect to="/news" />} />
+                <Route component={() => <Redirect to="/new" />} />
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
-            <IonTabButton tab="news" href="/news">
+            <IonTabButton tab="new" href="/new">
               <IonIcon icon={newspaperOutline} />
-              <IonLabel>News</IonLabel>
+              <IonLabel>New</IonLabel>
             </IonTabButton>
             <IonTabButton tab="trending" href="/trending">
               <IonIcon icon={trendingUpOutline} />
